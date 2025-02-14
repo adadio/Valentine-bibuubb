@@ -3,16 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine, Bibuubb!</title>
+    <title>Valentine Buat Bibuubb 💖</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Layar Password -->
+    <div id="password-screen">
+        <h2>Masukin Password Dulu yaa 💕</h2>
+        <input type="password" id="password-input" placeholder="Ketik password di sini">
+        <button onclick="checkPassword()">Masuk</button>
+    </div>
+
+    <!-- Konten Valentine (tersembunyi awalnya) -->
+    <div id="valentine-content" style="display: none;">
+        <audio id="bg-music" loop>
+            <source src="love.mp3" type="audio/mpeg">
+        </audio>
+        
         <h1>💖 Happy Valentine, Sayang! 💖</h1>
-        <p>Klik hati di bawah ini yaaa! 🎀</p>
+        <p>Kamu spesial banget buat aku! Klik tombol ini yaa 🎀</p>
         <button onclick="showMessage()">❤️</button>
         <p id="message" style="display: none;">Love youu moreee, bibuubb! 💕</p>
+
+        <h2>Tulis surat buat aku 📝</h2>
+        <textarea id="love-note" placeholder="Ketik surat cinta di sini..."></textarea>
+        <button onclick="saveNote()">Simpan Surat</button>
+
+        <h2>Kenangan Kita 📸</h2>
+        <div class="gallery">
+            <img src="img/photo1.jpg" alt="Foto 1">
+            <img src="img/photo2.jpg" alt="Foto 2">
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
